@@ -13,7 +13,7 @@ public class Romain {
     public void parler(String texte) {
        System.out.println(prendreParole() + "« " + texte + "»");
     }
-    private String prendreParole() {
+    public String prendreParole() {
        return "Le romain " + nom + " : ";
     }
     public void recevoirCoup(int forceCoup) {
@@ -23,5 +23,14 @@ public class Romain {
        } else {
           parler("J'abandonne...");
        }
+    }
+    public static void main(String[] args) {
+    	Romain augustus= new Romain("Augustus",1);
+    	
+    	augustus.prendreParole();
+    	augustus.parler("yokoso watashi wa no soul siocety");
+    	augustus.recevoirCoup(8);
+    	
+    			
     }
 }
